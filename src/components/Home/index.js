@@ -13,7 +13,7 @@ class Home extends Component{
        teamData:[],
    }
    
-   componentDidCatch(){
+   componentDidMount(){
        this.getTeams()
    }
 

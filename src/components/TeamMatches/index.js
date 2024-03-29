@@ -34,11 +34,11 @@ class TeamMatches extends Component{
     })
 
     getTeamMatch=async ()=>{
-        const{match}=this.props,
+        const{match}=this.props
         const{params}=match
         const{id}=params
 
-        const response=await fetch (`${teamMatchApiUrl}${id}`)
+        const response=await fetch (`${teamMatchesApiUrl}${id}`)
         const fetchedData=await response.json()
         const formattedData={
             teamBannerUrl:fetchedData.team_banner_url,

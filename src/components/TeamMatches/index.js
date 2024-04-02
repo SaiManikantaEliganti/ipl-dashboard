@@ -41,7 +41,7 @@ class TeamMatches extends Component{
         const response=await fetch (`${teamMatchesApiUrl}${id}`)
         const fetchedData=await response.json()
         const formattedData={
-            teamBannerUrl:fetchedData.team_banner_url,
+            teamBannerURL:fetchedData.team_banner_url,
             latestMatch:this.getFormattedData(fetchedData.latest_match_details),
             recentMatches:fetchedData.recent_matches.map(eachMatch=>
                 this.getFormattedData(eachMatch))
@@ -64,7 +64,7 @@ class TeamMatches extends Component{
 
     renderTeamMatches=()=>{
         const{teamMatchesData}=this.state
-        const{teamBannerUrl,latestMatch}=teamMatchesData
+        const{teamBannerURL,latestMatch}=teamMatchesData
 
         return(
             <div className="responsive-container">
